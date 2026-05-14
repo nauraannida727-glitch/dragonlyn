@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function logout() {
+
         localStorage.removeItem("username");
-        location.reload();
+
+        window.location.reload();
     }
 
     const user = localStorage.getItem("username");
@@ -17,9 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "Halo, " + user;
 
         document.getElementById("authArea").innerHTML = `
-            <button onclick="logout()" class="nav-cta">
-                Logout
-            </button>
+            <a href="#" onclick="logout()">LOGOUT</a>
         `;
     }
 
