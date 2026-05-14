@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         localStorage.removeItem("username");
 
-        window.location.reload();
+        location.reload();
     }
 
     const user = localStorage.getItem("username");
