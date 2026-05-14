@@ -24,6 +24,27 @@
     <script src="js/jquery-ui.min.js"></script> <!-- popular tab -->
 
     <!-- JavaScripts -->  
+	  <style>
+
+#userMenu{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+#userInfo{
+    color:#6d1b3d;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:15px;
+}
+
+#authArea a{
+    color:#6d1b3d !important;
+    font-weight:bold;
+}
+
+</style>
 </head>
   <body>
   	<!-- menu start -->	
@@ -49,15 +70,9 @@
                   <li><a href="about.html">ABOUT</a></li>
                   <li><a href="portfolio.html">PORTFOLIO</a></li>
                   <li><a href="contact.html">CONTACT</a></li>
-				  <li>
+		<li id="userMenu">
 
-    <a href="#" id="userInfo" style="
-        color:#6d1b3d;
-        font-weight:bold;
-        display:inline-block;
-        margin-right:15px;
-        text-decoration:none;
-    "></a>
+    <a href="#" id="userInfo"></a>
 
     <span id="authArea">
         <a href="#" onclick="goLogin()">LOGIN</a>
