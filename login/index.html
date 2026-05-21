@@ -23,29 +23,18 @@ text-align:center;
 "></div>
 
 <form id="loginForm">
-    <form id="loginForm">
-      <div class="field email">
-        <div class="input-area">
-          <input type="text" id="username" placeholder="Username">
-          <i class="icon fas fa-envelope"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Email can't be blank</div>
-      </div>
-      <div class="field password">
-        <div class="input-area">
-          <input type="password" id="password" placeholder="Password">
-          <i class="icon fas fa-lock"></i>
-          <i class="error error-icon fas fa-exclamation-circle"></i>
-        </div>
-        <div class="error error-txt">Password can't be blank</div>
-      </div>
-      <div class="pass-txt"><a href="#">Forgot password?</a></div>
-      <input type="submit" value="Login">
-    </form>
-    <div class="sign-txt">Not yet member? <a href="register.html">Signup now</a>
-  </div>
+   <h3>Silakan Login</h3>
+   <label for="username" placeholder="Password .." required="required">
+   <!-- <p id="message"></p -->
+    <button type="submit" >masuk</button>
 
+    <div class="social">
+    <div class="go"> <a href="regisrter.html">DAFTAR </a></div>
+    <div class="kanan"><i class="fab fa-google"></i>  Google</div>
+    </div>
+    <button onclick="location.href='../index.html';">Home</button>
+    <div id="alertBox" class="alert" style=display:none:"></div>
+</form>
 <script src="js/login.js"></script>
 
 </body>
