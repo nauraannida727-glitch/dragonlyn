@@ -66,17 +66,14 @@
             <div id="top-menu">
               <div class="collapse navbar-collapse main_menu" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="current"><a href="index.html">UMUM</a></li>
-                  <li><a href="about.html">TENTANG</a></li>
-                  <li><a href="portfolio.html">GALERY</a></li>
-                  <li><a href="contact.html">KONTAK</a></li>
-				  <li class="nav-user">
-    <span id="userInfo">Belum login</span>
-</li>
-
-<li class="nav-auth" id="authArea">
-    <button onclick="goLogin()" class="nav-cta">Login</button>
-</li>
+                  <li class="current"><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="portfolio.html">PORTFOLIO</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+					<p id="userInfo">Belum login</p>
+					
+<div id="authArea">
+<button onclick="goLogin()" class="nav-cta">Login</button>
                 </ul>
               </div>
             </div>
@@ -229,65 +226,6 @@
 
    </script>
 	    <script src="login/js/welcome.js"></script>
-	  <script>
-let isLoggedIn = false;
-let username = "";
-
-// cek status saat halaman dibuka
-window.onload = function(){
-    const savedUser = localStorage.getItem("username");
-
-    if(savedUser){
-        isLoggedIn = true;
-        username = savedUser;
-        updateUI();
-    }
-};
-
-function handleAuth(){
-    if(!isLoggedIn){
-        loginUser();
-    }else{
-        logoutUser();
-    }
-}
-
-function loginUser(){
-    // sementara kita pakai prompt (nanti bisa diganti form login)
-    let inputName = prompt("Masukkan nama kamu:");
-
-    if(!inputName) return;
-
-    username = inputName;
-    isLoggedIn = true;
-
-    localStorage.setItem("username", username);
-
-    updateUI();
-}
-
-function logoutUser(){
-    isLoggedIn = false;
-    username = "";
-
-    localStorage.removeItem("username");
-
-    updateUI();
-}
-
-function updateUI(){
-    const userInfo = document.getElementById("userInfo");
-    const authBtn = document.getElementById("authBtn");
-
-    if(isLoggedIn){
-        userInfo.innerText = "Halo, " + username;
-        authBtn.innerText = "Logout";
-    }else{
-        userInfo.innerText = "Belum login";
-        authBtn.innerText = "Login";
-    }
-}
-</script>
   </body>
 
 </html>
