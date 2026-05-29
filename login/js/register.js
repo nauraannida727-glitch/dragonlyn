@@ -5,20 +5,43 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `action=register&username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
-    });
+    const message = document.getElementById("message");
 
-    const data = await res.json();
+    try {
+        const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `action=register&username=${encodeURIComponent(username)}&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        });
 
-    if (data.status === "success") {
-        document.getElementById("message").innerText = "Registrasi berhasil, silakan login";
-        window.location.href = "index.html";
-    } else {
-        document.getElementById("message").innerText = data.message || "Gagal registrasi";
+        const data = await res.json();
+
+        console.log(data);
+
+        if (data.status === "success") {
+
+            message.style.color = "green";
+            message.innerText = "✅ Registrasi berhasil, silakan login";
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
+
+        } else {
+
+            message.style.color = "red";
+            message.innerText = data.message || "❌ Username sudah digunakan";
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        message.style.color = "red";
+        message.innerText = "❌ Terjadi kesalahan server";
+
     }
 });
