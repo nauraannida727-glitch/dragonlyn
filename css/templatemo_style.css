@@ -557,3 +557,29 @@ span.yellow { color: #e8eb06; }
         text-align:center;
     }
 }
+.nav-user, .nav-auth{
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+}
+
+#userInfo{
+    color:#f9deb7;
+    font-weight:600;
+    font-size:14px;
+}
+
+.nav-cta{
+    background: linear-gradient(135deg, #6d1b3d, #a1345b);
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.25s ease;
+}
+
+.nav-cta:hover{
+    transform: translateY(-2px);
+}
