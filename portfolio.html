@@ -5,6 +5,7 @@
 	<meta name="description" content="" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1">
+	<link rel="icon" href="images/favicon.png">
  	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700,800' rel='stylesheet' type='text/css'> 
     
    	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -43,10 +44,16 @@
             <div id="top-menu">
               <div class="collapse navbar-collapse main_menu" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="index.html">HOME</a></li>
-                  <li><a href="about.html">ABOUT</a></li>
-                  <li class="current"><a href="portfolio.html">PORTFOLIO</a></li>
-                  <li><a href="contact.html">CONTACT</a></li>
+                  <li><a href="index.html">UMUM</a></li>
+                  <li><a href="about.html">TENTANG</a></li>
+                  <li class='current"><a href="portfolio.html">GALERY</a></li>
+                  <li><a href="contact.html">KONTAK</a></li>
+				  <li class="nav-user">
+   					<span id="userInfo">Belum login</span>
+				  </li>
+
+				  <li class="nav-login">
+   					<button onclick="goLogin()" class="nav-cta">Login</button>
                 </ul>
               </div>
             </div>
@@ -226,6 +233,7 @@
         </div>
    </div>
    <!-- footer end-->
+		<script src="login/js/welcome.js"></script>
   </body>
 
 </html>
