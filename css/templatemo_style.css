@@ -504,3 +504,56 @@ span.yellow { color: #e8eb06; }
 	.templatemo_homebot_gray .image{width: 71%; }
  
   }
+/* User info */
+.nav-user{
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+}
+
+#userInfo{
+    color:#f9deb7;
+    font-weight:600;
+    font-size:14px;
+}
+
+/* Login button wrapper */
+.nav-login{
+    display:flex;
+    align-items:center;
+}
+
+/* Tombol login */
+.nav-cta{
+    background: linear-gradient(135deg, #6d1b3d, #a1345b);
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 3px 10px rgba(0,0,0,0.25);
+    transition:0.25s ease;
+}
+
+/* Hover efek */
+.nav-cta:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #8b2950, #c04a73);
+}
+
+/* Klik efek */
+.nav-cta:active{
+    transform: translateY(0);
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+@media (max-width: 768px){
+    .nav-user, .nav-login{
+        padding:10px 15px;
+    }
+
+    .nav-cta{
+        width:100%;
+        text-align:center;
+    }
+}
